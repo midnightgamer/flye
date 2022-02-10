@@ -13,3 +13,27 @@ html {
   color: $color-text;
   background: $color-black;
 }
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ngx-pagination {
+  width: fit-content;
+  border: 1px solid $color-border;
+  margin: 0 auto 50px !important;
+
+  li {
+    &:not(:last-of-type) {
+
+      border-right: 1px solid $color-border;
+    }
+  }
+}
+
+.ngx-pagination a, .ngx-pagination button {
+  color: $color-blue !important;
+}
