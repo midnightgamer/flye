@@ -1,0 +1,30 @@
+@import "src/variables";
+
+label {
+  margin: 20px 0 0;
+  display: block;
+
+  input {
+    display: block;
+    padding: 8px 6px;
+    border-radius: 4px;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+    font-family: $font-family;
+    border: none;
+    margin: 10px 0 15px;
+  }
+}
+
+button {
+  background: $color-blue;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: $font-500;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}

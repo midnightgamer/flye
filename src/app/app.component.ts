@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {GlobalService} from "./service/global/global.service";
 
 @Component({
@@ -9,6 +9,10 @@ import {GlobalService} from "./service/global/global.service";
 export class AppComponent {
   title = 'flye';
 
-  constructor(public global: GlobalService) {
+  constructor(public global: GlobalService, private cdr: ChangeDetectorRef) {
+  }
+
+  ngAfterContentChecked() {
+    this.cdr.detectChanges();
   }
 }

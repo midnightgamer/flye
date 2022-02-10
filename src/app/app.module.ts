@@ -15,6 +15,7 @@ import {NgxPaginationModule} from "ngx-pagination";
 import { LoaderComponent } from './component/loader/loader.component';
 import { UserSearchComponent } from './component/user-search/user-search.component';
 import {FormsModule} from "@angular/forms";
+import { PaginationComponent } from './component/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from "@angular/forms";
     UserComponent,
     LandingComponent,
     LoaderComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

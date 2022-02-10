@@ -1,0 +1,21 @@
+<div *ngIf="userInfo" class="user-profile">
+  <div class="user-profile-wrapper">
+    <div class="user-image">
+      <img
+        [src]="userInfo.avatar_url"
+        [alt]="userInfo.name">
+    </div>
+    <div class="user-info">
+      <h1>{{userInfo.name}}</h1>
+      <p>{{userInfo.bio}}</p>
+      <address>
+        <img src="assets/location.svg" alt="location"> {{userInfo.location}}
+      </address>
+      <ul>
+        <li>Twitter: {{userInfo.twitter_username}}</li>
+      </ul>
+    </div>
+  </div>
+  <a [href]="userInfo.html_url" target="_blank"> <img src="assets/link.svg" alt="link">
+    https://github.com/{{userInfo.login}}</a>
+</div>

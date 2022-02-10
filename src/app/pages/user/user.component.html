@@ -1,0 +1,19 @@
+<div class="container">
+  <ng-container *ngIf="user">
+    <app-user-profile [userInfo]=" user"></app-user-profile>
+    <div class="repo-container" *ngIf="repo">
+      <p class="error" *ngIf="repo?.length === 0">
+        User dose not have any repo
+      </p>
+      <app-repo-card
+        *ngFor="let item of repo| paginate: { itemsPerPage: 10,
+                   currentPage: p, totalItems:user.public_repos }"
+        [repoItem]="item"
+      ></app-repo-card>
+    </div>
+    <app-pagination [user]="user"  [p]="p" (childEvent)="nextPage($event)"
+    ></app-pagination>
+  </ng-container>
+  <p class="error" *ngIf="!user">No user found with username</p>
+  <app-user-search></app-user-search>
+</div>

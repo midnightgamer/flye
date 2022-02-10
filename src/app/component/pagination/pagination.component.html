@@ -1,0 +1,23 @@
+<div class="pagination-container" *ngIf="user">
+  <pagination-controls
+    *ngIf="user.public_repos > 10"
+    (pageChange)="nextPage($event)"
+    previousLabel=""
+    nextLabel=""
+  >
+  </pagination-controls>
+  <div class="buttons">
+    <div class="btn left" (click)="nextPage(1)"
+         [ngClass]="p===1?'disabled':''"><img
+      src="assets/right-arrow.svg"
+      alt="arrow">
+      Older
+    </div>
+    <div class="btn right"
+         (click)="nextPage(user.public_repos/10)"
+         [ngClass]="p===math.round(user.public_repos/10)?'disabled':''">
+      Newer<img
+      src="assets/right-arrow.svg"
+      alt="arrow"></div>
+  </div>
+</div>

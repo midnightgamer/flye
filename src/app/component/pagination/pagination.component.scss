@@ -1,0 +1,41 @@
+@import "src/variables";
+.pagination-container {
+  width: fit-content;
+  margin: 0 auto;
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+
+    .btn {
+      cursor: pointer;
+      border: 1px solid $color-border;
+      padding: 10px 25px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      color: $color-blue;
+
+      img {
+        width: 20px;
+        margin: 0 10px;
+      }
+      &.disabled{
+        color: $color-text;
+        cursor: not-allowed;
+        img{
+          filter: grayscale(1);
+
+        }
+      }
+      &.left {
+        margin: 0 50px 0 0;
+      }
+
+      &.right {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

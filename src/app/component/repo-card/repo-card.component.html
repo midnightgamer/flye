@@ -1,0 +1,5 @@
+<div *ngIf="repoItem" class="repo-card">
+  <h2>{{repoItem.name}}</h2>
+  <p>{{repoItem.description}}</p>
+  <app-topic *ngIf="repoItem.language" [item]="repoItem.language"></app-topic>
+</div>

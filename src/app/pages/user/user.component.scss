@@ -1,0 +1,20 @@
+@import "src/variables";
+
+.repo-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0 -30px;
+
+  app-repo-card {
+    width: calc(50% - 30px);
+    margin: 0 0 30px 30px;
+  }
+}
+
+.error {
+  padding: 0 15px;
+  color: #f00;
+  margin: 15px 0;
+  font-weight: $font-500;
+}
+
